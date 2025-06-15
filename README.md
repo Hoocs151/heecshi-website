@@ -200,7 +200,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Hoocshi** – *Contribution: 1%* – [GitHub Profile](https://github.com/Hoocs151)
 - **AI** – *Contribution: 99%*
 
-
 ## 🙏 Acknowledgments
 
 - Special thanks to all contributors
