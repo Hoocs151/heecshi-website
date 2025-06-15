@@ -197,8 +197,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **Hoocshi** - *Project Owner* - [GitHub Profile](https://github.com/Hoocs151)
-- **AI** - *Boss*
+- **Hoocshi** – *Contribution: 1%* – [GitHub Profile](https://github.com/Hoocs151)
+- **AI** – *Contribution: 99%*
+
 
 ## 🙏 Acknowledgments
 
