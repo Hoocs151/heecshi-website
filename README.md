@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Heecshi](public/img/Logos/favicon.png)
+![Heecshi](public/img/Logos/back.jpg)
 
 [![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
