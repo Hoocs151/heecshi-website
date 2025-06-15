@@ -8,10 +8,12 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Website Status](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Fheecshi-website.vercel.app)](https://heecshi-website.vercel.app/)
+[![Last Commit](https://img.shields.io/github/last-commit/Hoocs151/heecshi-website?style=for-the-badge)](https://github.com/Hoocs151/heecshi-website/commits/main)
 
-A modern, responsive website for the Heecshi Discord bot built with Next.js and Tailwind CSS. Experience seamless navigation, beautiful animations, and a user-friendly interface.
+A modern, responsive website for the Heecshi Discord bot built with Next.js and Tailwind CSS. Experience seamless navigation, beautiful animations, and a user-friendly interface designed to showcase and manage your Discord bot experience.
 
-[Demo](heecshi-website.vercel.app/) · [Report Bug](https://github.com/Hoocs151/heecshi-website/issues) · [Request Feature](https://github.com/Hoocs151/heecshi-website/issues)
+[Live Demo](https://heecshi-website.vercel.app/) · [Report Bug](https://github.com/Hoocs151/heecshi-website/issues) · [Request Feature](https://github.com/Hoocs151/heecshi-website/issues)
 
 </div>
 
@@ -23,6 +25,8 @@ A modern, responsive website for the Heecshi Discord bot built with Next.js and 
 - [📱 Responsive Design](#-responsive-design)
 - [🔧 Development](#-development)
 - [📊 Performance](#-performance)
+- [🔒 Security](#-security)
+- [🌐 Deployment](#-deployment)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 - [👥 Authors](#-authors)
@@ -30,6 +34,7 @@ A modern, responsive website for the Heecshi Discord bot built with Next.js and 
 
 ## ✨ Features
 
+### Core Features
 - 🎨 Modern UI with glassmorphism effects
 - 🌟 Smooth page transitions and animations
 - 🖱️ Custom interactive cursor
@@ -38,158 +43,153 @@ A modern, responsive website for the Heecshi Discord bot built with Next.js and 
 - 🚀 Optimized performance
 - 🌐 SEO friendly
 - 🎯 Easy navigation
+
+### Additional Features
 - 📜 Terms of Service and Privacy Policy pages
-- 🌙 Dark mode support
-- 🔒 Security best practices
-- 🌍 Internationalization ready
+- 🌙 Dark mode support with system preference detection
+- 🔒 Security best practices implementation
+- 🌍 Internationalization ready (i18n)
+- 📊 Analytics integration ready
+- 🔄 CI/CD pipeline setup
+- 📱 PWA support
+- 🎨 Customizable theme system
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js](https://nextjs.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **State Management**: [React Context](https://reactjs.org/docs/context.html)
-- **Meta Tags**: [Next SEO](https://github.com/garmeeh/next-seo)
-- **Containerization**: [Docker](https://www.docker.com/)
-- **Package Manager**: [npm](https://www.npmjs.com/)
-- **Linting**: [ESLint](https://eslint.org/)
-- **Code Formatting**: [Prettier](https://prettier.io/)
+### Core Technologies
+- **Framework**: [Next.js](https://nextjs.org/) - React framework for production
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) - Production-ready motion library
+- **State Management**: [React Context](https://reactjs.org/docs/context.html) - For global state management
+
+### Development Tools
+- **Package Manager**: [npm](https://www.npmjs.com/) - Dependency management
+- **Linting**: [ESLint](https://eslint.org/) - Code quality tool
+- **Formatting**: [Prettier](https://prettier.io/) - Code formatter
+- **Testing**: [Jest](https://jestjs.io/) & [React Testing Library](https://testing-library.com/react)
+
+### DevOps & Deployment
+- **Containerization**: [Docker](https://www.docker.com/) - Application containerization
+- **CI/CD**: GitHub Actions - Automated workflows
+- **Hosting**: [Vercel](https://vercel.com/) - Edge-optimized hosting
+- **Monitoring**: [Sentry](https://sentry.io/) - Error tracking
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-Before you begin, ensure you have the following installed:
+Ensure you have installed:
 - [Node.js](https://nodejs.org/) (v14 or higher)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [npm](https://www.npmjs.com/) (v7 or higher) or [yarn](https://yarnpkg.com/)
+- [Git](https://git-scm.com/)
 - [Docker](https://www.docker.com/) (optional)
 
-### Installation
+### Quick Start
 
-1. Clone the repository:
+1. **Clone the repository**
    ```bash
    git clone https://github.com/yourusername/heecshi-website.git
    cd heecshi-website
    ```
 
-2. Install dependencies:
+2. **Install dependencies**
    ```bash
    npm install
    # or
    yarn install
    ```
 
-3. Create a `.env.local` file:
+3. **Set up environment variables**
    ```bash
    cp .env.example .env.local
+   # Edit .env.local with your values
    ```
 
-4. Start the development server:
+4. **Start development server**
    ```bash
    npm run dev
    # or
    yarn dev
    ```
 
-The site will be available at `http://localhost:3000`
+Visit `http://localhost:3000` to see your app.
 
-### Docker Deployment
+### Docker Setup
 
-1. Build the Docker image:
+1. **Build the image**
    ```bash
    docker build -t heecshi-website .
    ```
 
-2. Run the container:
+2. **Run the container**
    ```bash
    docker run -p 80:80 heecshi-website
+   ```
+
+3. **Using Docker Compose**
+   ```bash
+   docker-compose up -d
    ```
 
 ## 🎨 Customization
 
 ### Theme Configuration
-The website's theme is fully customizable through:
-- `tailwind.config.js` - Colors, fonts, and design tokens
-- `src/styles/globals.css` - Global styles and CSS variables
-- `src/theme/index.js` - Theme context and dark mode settings
+Customize the website's appearance through:
+- `tailwind.config.js` - Design tokens and theme variants
+- `src/styles/globals.css` - Global styles
+- `src/theme/index.js` - Theme context
 
-### Components
-Our modular components include:
-- `CustomCursor`: Interactive cursor with hover effects
-- `AnimatedBackground`: Dynamic particle system background
-- `ScrollProgress`: Progress indicator and scroll-to-top button
-- `PageTransition`: Smooth page transition animations
-- `ThemeToggle`: Dark/Light mode switcher
-- `LanguageSelector`: Internationalization support
-
-## 📱 Responsive Design
-
-The website is fully responsive and optimized for:
-- 💻 Desktop (1200px+)
-- 💻 Laptop (1024px)
-- 📱 Tablet (768px)
-- 📱 Mobile (320px+)
-- 📱 Different screen orientations
-
-## 🔧 Development
-
-### Available Scripts
-
-- `npm run dev`: Starts development server
-- `npm run build`: Creates production build
-- `npm start`: Serves production build
-- `npm run lint`: Runs ESLint
-- `npm run format`: Formats code with Prettier
-- `npm run test`: Runs Jest tests
-- `npm run analyze`: Analyzes bundle size
-
-### Project Structure
-```
-heecshi-website/
-├── public/
-│   ├── img/
-│   └── locales/
-├── src/
-│   ├── components/
-│   │   ├── common/
-│   │   └── layout/
-│   ├── pages/
-│   ├── styles/
-│   ├── theme/
-│   ├── utils/
-│   └── config/
-├── tests/
-├── Dockerfile
-├── docker-compose.yml
-└── tailwind.config.js
+### Component Customization
+Modify core components:
+```jsx
+src/components/
+├── common/
+│   ├── CustomCursor/
+│   ├── AnimatedBackground/
+│   └── ThemeToggle/
+└── layout/
+    ├── Header/
+    ├── Footer/
+    └── Navigation/
 ```
 
-## 📊 Performance
+## 🔒 Security
 
-Our website achieves high performance scores:
-- 🚀 98+ Performance
-- ♿ 100 Accessibility
-- 🔍 100 SEO
-- ✨ 98+ Best Practices
+- ✅ HTTPS enforced
+- ✅ Content Security Policy
+- ✅ XSS Protection
+- ✅ CSRF Protection
+- ✅ Rate Limiting
+- ✅ Security Headers
+- ✅ Input Validation
+- ✅ Dependency Scanning
 
-### Optimizations
-- Image optimization with Next.js Image
-- Code splitting and lazy loading
-- CSS purging with Tailwind
-- Efficient caching strategies
-- Minified production build
+## 🌐 Deployment
+
+### Vercel (Recommended)
+```bash
+npm run deploy
+# or
+vercel --prod
+```
+
+### Manual Deployment
+1. Build the application
+   ```bash
+   npm run build
+   ```
+2. Start the production server
+   ```bash
+   npm start
+   ```
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how you can help:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-Please read our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+- Code of Conduct
+- Development Process
+- Pull Request Process
+- Coding Standards
 
 ## 📄 License
 
@@ -198,7 +198,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👥 Authors
 
 - **Hoocshi** - *Project Owner* - [GitHub Profile](https://github.com/Hoocs151)
-- **AI** - *Boss :D*
+- **AI** - *Boss*
 
 ## 🙏 Acknowledgments
 
@@ -207,3 +207,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Shields.io](https://shields.io/) for badges
 - [Heroicons](https://heroicons.com/) for icons
 - [unDraw](https://undraw.co/) for illustrations
+
+---
+
+<div align="center">
+
+[⬆ Back to top](#heecshi-discord-bot-website)
+
+</div>
