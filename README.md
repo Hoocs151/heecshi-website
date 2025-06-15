@@ -11,7 +11,7 @@
 
 A modern, responsive website for the Heecshi Discord bot built with Next.js and Tailwind CSS. Experience seamless navigation, beautiful animations, and a user-friendly interface.
 
-[Demo](https://heecshi.com) · [Report Bug](https://github.com/yourusername/heecshi-website/issues) · [Request Feature](https://github.com/yourusername/heecshi-website/issues)
+[Demo](heecshi-website.vercel.app/) · [Report Bug](https://github.com/Hoocs151/heecshi-website/issues) · [Request Feature](https://github.com/Hoocs151/heecshi-website/issues)
 
 </div>
 
@@ -198,7 +198,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👥 Authors
 
 - **Hoocshi** - *Project Owner* - [GitHub Profile](https://github.com/Hoocs151)
-- **AI** - *Boss :D* - 🤖
+- **AI** - *Boss :D*
 
 ## 🙏 Acknowledgments
 
