@@ -1,4 +1,4 @@
-# Heecshi Discord Bot Website
+<h1 align="center">Heecshi Discord Bot Website</h1>
 
 <div align="center">
 
