@@ -4,8 +4,24 @@ import { motion } from 'framer-motion';
 const CustomCursor = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
+    const [isTouchDevice, setIsTouchDevice] = useState(false);
 
     useEffect(() => {
+        const checkTouchDevice = () => {
+            setIsTouchDevice(('ontouchstart' in window) || (navigator.maxTouchPoints > 0));
+        };
+
+        checkTouchDevice();
+        window.addEventListener('resize', checkTouchDevice);
+
+        return () => {
+            window.removeEventListener('resize', checkTouchDevice);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isTouchDevice) return;
+
         const updateMousePosition = (e) => {
             setMousePosition({ x: e.clientX, y: e.clientY });
         };
@@ -25,12 +41,14 @@ const CustomCursor = () => {
             window.removeEventListener('mousemove', updateMousePosition);
             document.removeEventListener('mouseover', handleMouseEnter);
         };
-    }, []);
+    }, [isTouchDevice]);
+
+    if (isTouchDevice) return null;
 
     return (
         <>
             <motion.div
-                className="pointer-events-none fixed left-0 top-0 z-50 h-4 w-4 rounded-full bg-primary-400/30 backdrop-blur-sm"
+                className="pointer-events-none fixed left-0 top-0 z-50 h-4 w-4 rounded-full bg-primary-400/30 backdrop-blur-sm hidden md:block"
                 animate={{
                     x: mousePosition.x - 8,
                     y: mousePosition.y - 8,
@@ -44,7 +62,7 @@ const CustomCursor = () => {
                 }}
             />
             <motion.div
-                className="pointer-events-none fixed left-0 top-0 z-50 h-2 w-2 rounded-full bg-primary-400"
+                className="pointer-events-none fixed left-0 top-0 z-50 h-2 w-2 rounded-full bg-primary-400 hidden md:block"
                 animate={{
                     x: mousePosition.x - 4,
                     y: mousePosition.y - 4,
